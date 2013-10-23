@@ -1,0 +1,141 @@
+<div class="panel panel-info">
+    <div class="panel-heading"><strong>דירות בפרוייקט</strong></div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="col-md-12 col-sm-12">
+                    <table id="apartments_table" class="table table-condensed table-bordered table-striped hidden">
+                        <thead>
+                            <tr>
+                                <th>חדרים</th>
+                                <th>דגם</th>
+                                <th>סוג</th>
+                                <th>מחיר</th>
+                                <th width="60px"></th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong>פרטים</strong></div>
+                <div class="panel-body" id="apartment_fields">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="form-group col-md-3 col-sm-3">
+                                <label for="apartment_type">סוג:</label>
+                                <select  name="apartment_type" class="form-control" id="apartment_type">
+
+                                </select>
+                            </div>	
+
+                            <div class="form-group col-md-3 col-sm-3">
+                                <label for="apartment_model">דגם:</label>
+                                <input  name="apartment_model" class="form-control" id="apartment_model" placeholder="דגם">
+                            </div>
+
+                            <div class="form-group col-md-2 col-sm-2">
+                                <label for="apartment_rooms">חדרים:</label>
+
+                                <input name="apartment_rooms" class="form-control room_values" id="apartment_rooms">
+                            </div>
+
+                            <div class="form-group col-md-2 col-sm-2">
+                                <label for="apartment_showers">מקלחות:</label>
+                                <input  name="apartment_showers" class="form-control spinner_min_1"  id="apartment_showers" placeholder="מקלחות">
+                            </div>					
+
+                            <div class="form-group col-md-2 col-sm-2">
+                                <label for="apartment_toilets">שירותים בלבד:</label>
+                                <input  name="apartment_toilets" class="form-control spinner_min_0"  id="apartment_toilets" placeholder="שירותים">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="form-group  col-md-3 col-sm-3">
+                                <label for="apartment_price">מחיר:</label>
+                                <input  name="apartment_price" class="form-control" id="apartment_price" placeholder="מחיר">
+                            </div>
+
+                            <div class="form-group col-md-3 col-sm-3">
+                                <label for="min_floor">קומה מינימלית:</label>
+                                <input  name="min_floor" class="form-control spinner_min_1" id="min_floor" placeholder="קומה מינימלית">
+                            </div>
+
+                            <div class="form-group col-md-3 col-sm-3">
+                                <label for="max_floor">קומה מקסימלית:</label>
+                                <input  name="max_floor" class="form-control spinner_min_1" id="max_floor" placeholder="קומה מקסימלית">
+                            </div>
+                            <div class="form-group col-md-3 col-sm-3">
+                                <label for="apartment_parking_spaces_count">מקומות חניה:</label>
+                                <input  name="apartment_parking_spaces_count" class="form-control spinner_min_0"  id="apartment_parking_spaces_count" placeholder="מקומות חניה">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="form-group col-md-2 col-sm-2">
+                                <label for="apartment_size">שטח עיקרי:</label>
+                                <input  name="apartment_size" class="form-control spinner_size_values" id="apartment_size" placeholder="שטח עיקרי">
+                            </div>
+                            <div class="form-group col-md-2 col-sm-2">
+                                <label for="apartment_balcony_1_size">שטח מרפסת 1:</label>
+                                <input  name="apartment_balcony_1_size" class="form-control spinner_size_values" id="apartment_balcony_1_size" placeholder="שטח מרפסת 1">
+                            </div>
+
+                            <div class="form-group col-md-2 col-sm-2">
+                                <label for="apartment_balcony_2_size">שטח מרפסת 2:</label>
+                                <input  name="apartment_balcony_2_size" class="form-control spinner_size_values" id="apartment_balcony_2_size" placeholder="שטח מרפסת 2">
+                            </div>					
+
+                            <div class="form-group col-md-2 col-sm-2">
+                                <label for="apartment_yard_size">שטח חצר:</label>
+                                <input  name="apartment_yard_size" class="form-control spinner_size_values" id="apartment_yard_size" placeholder="שטח חצר">
+                            </div>
+
+                            <div class="form-group col-md-2 col-sm-2">
+                                <label for="apartment_warehouse_size">שטח מחסן:</label>
+                                <input  name="apartment_warehouse_size" class="form-control spinner_size_values" id="apartment_warehouse_size" placeholder="שטח מחסן">
+                            </div>
+                            <div class="form-group col-md-2 col-sm-2">
+                                <label for="apartment_roof_size">שטח גג:</label>
+                                <input  name="apartment_roof_size" class="form-control spinner_size_values" id="apartment_roof_size" placeholder="שטח גג">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row hidden">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="form-group col-md-12 col-sm-12">
+                                <label for="comments">הערות:</label>
+                                <textarea name="comments" class="form-control" id="comments" rows="2" cols="1" placeholder="הערות" wrap="hard"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="form-group col-md-4">
+                                <label for="apartment_plan">שרטוט:</label>
+                                <input name="apartment_plan" accept="image/*" type="file" id="apartment_plan">
+                            </div>
+                            <div class="form-group col-md-2 col-sm-2 col-md-offset-6">
+                                <label for="relevance_score">דירוג:</label>
+                                <input name="relevance_score" class="form-control"  id="relevance_score" value="0" disabled="disabled">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <a id="update_apartment" class="btn btn-primary hidden">עדכן</a>
+                    <a id="duplicate_apartment" class="btn btn-success hidden">צור דירה דומה</a>
+                    <a id="add_apartment" class="btn btn-primary">הוסף</a>
+                    <a id="delete_apartment" class="btn btn-danger hidden pull-right">מחק</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

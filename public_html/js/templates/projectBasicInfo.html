@@ -1,0 +1,148 @@
+<div class="panel panel-info" ng-controller="basicInfoController">
+    {{project.id}}
+    <div class="panel-heading"><strong>פרטי הפרויקט</strong></div>
+    <div class="panel-body">
+        <div class="col-md-12 col-sm-12">
+            <div class="row">
+                <div class="col-md-3 col-sm-3 form-group">
+                    <label for="project_name">שם פרויקט:</label>
+                    <input name="project_name" class="form-control" id="project_name" placeholder="שם הפרויקט"
+                           autocomplete="off" ng-model="project.project_name">
+                </div>
+                <div class="col-md-3 col-sm-3 form-group">
+                    <label for="project_url">URL:</label>
+                    <input name="project_url" class="form-control" id="project_url" placeholder="URL" autocomplete="off"
+                           ng-model="project.url">
+                </div>
+                <div class="col-md-3 col-sm-3 form-group">
+                    <label for="project_entrepreneur_id">קבלן:</label>
+
+                    <div>
+                        <input name="project_entrepreneur_id" class="form-control" id="project_entrepreneur_id" placeholder="קבלן"
+                               ng-model="project.entrepreneur_id">
+
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 form-group"> <!-- TODO: ng-model -->
+                    <label for="">תאריך אכלוס:</label>
+
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <select name="project_population_month" class="form-control" id="project_population_month">
+                                <option value="">חודש</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <select name="project_population_year" class="form-control" id="project_population_date">
+                                <option value="">שנה</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-3 form-group">
+                    <label for="project_num_of_buildings">מס' מבנים:</label>
+                    <input name="project_num_of_buildings" class="form-control spinner_min_1"
+                           id="project_num_of_buildings" placeholder="מבנים" autocomplete="off" size="30"
+                           ng-model="project.num_of_buildings">
+                </div>
+                <div class="col-md-3 col-sm-3 form-group">
+                    <label for="project_num_of_floors">מס' קומות מקסימלי:</label>
+                    <input name="project_num_of_floors" class="form-control spinner_min_1" id="project_num_of_floors"
+                           placeholder="קומות" autocomplete="off" ng-model="project.num_of_floors">
+                </div>
+                <div class="col-md-3 col-sm-3 form-group">
+                    <label for="project_architect">אדריכל:</label>
+                    <input name="project_architect" class="form-control" id="project_architect" placeholder="אדריכל"
+                           ng-model="project.architect">
+                </div>
+                <div class="col-md-3 col-sm-3 form-group">
+                    <label for="project_residence_units">מס' יחידות דיור:</label>
+                    <input name="project_residence_units" class="form-control spinner_min_1"
+                           id="project_residence_units" placeholder="מס' יחידות דיור" autocomplete="off"
+                           ng-model="project.residence_units">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-4 col-sm-4">
+                    <label for="project_lead_email">כתובת מייל לשליחת לידים:</label>
+                    <input name="project_lead_email" class="form-control" id="project_lead_email"
+                           placeholder="כתובת מייל לשליחת לידים" type="email" autocomplete="off"
+                           ng-model="project.lead_email">
+                </div>
+                <div class="form-group col-md-2 col-sm-2 ">
+                    <input name="project_tama38" type="checkbox" id="project_tama38" placeholder="האם תמ''א 38?"
+                           ng-model="project.is_tama38">
+                    <label for="project_tama38">תמ"א 38</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-12 col-sm-12">
+                    <label for="entrepreneur_promotional_description">טקסט שיווקי:</label>
+                    <textarea name="entrepreneur_promotional_description" class="form-control"
+                              id="entrepreneur_promotional_description" rows="3" placeholder="טקסט שיווקי"
+                              ng-model="project.promotional_description"></textarea>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong>מיקום</strong></div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="form-group col-md-4 col-sm-4">
+                            <label for="location_city_id">עיר:</label>
+                            <select name="location_city_id" class="form-control" id="location_city_id" placeholder="עיר"
+                                    ng-model="project.location.city_id">
+                                <!--<option value="<?php echo $city->id; ?>"><?php echo $city->city_name; ?></option>-->
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4 col-sm-4">
+                            <label for="location_street">רחוב:</label>
+                            <input name="location_street" class="form-control" id="location_street" placeholder="רחוב"
+                                   autocomplete="off" ng-model="project.location.street">
+                        </div>
+                        <div class="form-group col-md-4 col-sm-4">
+
+                            <label for="location_house_number">מספר:</label>
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <input name="location_house_number" class="form-control" id="location_house_number"
+                                           placeholder="מספר" autocomplete="off"
+                                           ng-model="project.location.house_number">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <input type="button" id="show_on_map" class="btn btn-primary btn-sm form-control"
+                                           value="הצג על המפה">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6 col-sm-6">
+                            <label for="location_description">שכונה/איזור:</label>
+                            <input name="location_description" class="form-control" id="location_description"
+                                   placeholder="תיאור" autocomplete="off" ng-model="project.location.description">
+                        </div>
+                        <div class="form-group col-md-3 col-sm-3">
+                            <label for="wgs_lng">X:</label>
+                            <input name="wgs_lng" class="form-control" id="wgs_lng" placeholder="X" autocomplete="off"
+                                   ng-model="project.location.wgs_lng">
+                        </div>
+                        <div class="form-group col-md-3 col-sm-3">
+                            <label for="wgs_lat">Y:</label>
+                            <input name="wgs_lat" class="form-control" id="wgs_lat" placeholder="Y" autocomplete="off"
+                                   ng-model="project.location.wgs_lat">
+                        </div>
+                    </div>
+                    <div class="row map_container">
+                        <div class="col-md-12 col-sm-12" id="location_map">
+                        </div>
+                        <div class="search_box">
+                            <input name="search_location" class="form-control" id="location_search_input"
+                                   placeholder="חפש מקום" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

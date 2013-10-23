@@ -1,0 +1,28 @@
+.pull-center {
+    text-align: center;
+}
+#sidebar{
+    position: relative;
+    top: 0px;
+    left : 0px;
+}
+.ui-spinner{
+    height: 34px;    
+}
+.ui-spinner-input{
+    width: 85% ;
+    height: 26px;
+    padding: 0 12px;
+}
+.col-md-2.col-sm-2 .ui-spinner-input{
+    width: 75% ;
+}
+#location_map{width: 98%;height: 450px; margin: 0 auto;}
+.map_container{position: relative;}
+.search_box{
+    position:absolute;
+    margin: 0 30%;
+    top: 1.5em;
+    width: 40%;
+    border:1px solid;
+}
